@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="20dp">
+                <!-- Character Information Layout -->
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/s_reaper"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="14sp"
+                    app:drawableLeftCompat="@drawable/resized_ascendancy_reaper" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/editButton"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/light_gray_bg"
+                    android:contentDescription="@string/s_editCharacterData"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_edit"
+                    app:iconGravity="textStart"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/light_gray_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+
+            <!-- Separator Daily -->
+            <LinearLayout
+                android:id="@+id/separator_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorDailyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+            <!-- Chaos Dungeon -->
+            <RelativeLayout
+                android:id="@+id/layout_chaosDungeon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_chaosDungeon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_chaosDungeonDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_chaos_dungeon" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setChaosDungeon"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of2"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetChaosDungeon"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setChaosDungeon"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <!-- Guardian Raid -->
+            <RelativeLayout
+                android:id="@+id/layout_guardianRaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_guardianRaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_guardianRaidDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_guardian_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setGuardianRaid"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetGuardianRaid"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setGuardianRaid"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Una's Daily Tasks -->
+            <RelativeLayout
+                android:id="@+id/layout_unaDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_unaDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_unaDailyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_una_daily" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setUnaDaily"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetUnaDaily"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setUnaDaily"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Guild Support -->
+            <RelativeLayout
+                android:id="@+id/layout_guildSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_guildSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_guildSupportDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_sylmael" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setGuildSupport"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetGuildSupport"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setGuildSupport"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <!-- Separator Weekly -->
+            <LinearLayout
+                android:id="@+id/separator_weekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorWeeklyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+
+            <!-- Una's Weekly Tasks -->
+            <RelativeLayout
+                android:id="@+id/layout_unaWeekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_unaWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_unaWeeklyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_una_weekly" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setUnaWeekly"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetUnaWeekly"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setUnaWeekly"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Guild Bloodstones Exchange -->
+            <RelativeLayout
+                android:id="@+id/layout_guildBloodstones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_guildBloodstones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_bloodstonesDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_sylmael" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setGuildBloodstones"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetGuildBloodstones"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setGuildBloodstones"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Guild Contribution -->
+            <RelativeLayout
+                android:id="@+id/layout_guildContribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_guildContribution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_contributionDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_sylmael" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setGuildContribution"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetGuildContribution"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setGuildContribution"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Separator Weekly Raids -->
+            <LinearLayout
+                android:id="@+id/separator_weeklyRaids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorWeeklyRaidsDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+            <!-- Valtan -->
+            <RelativeLayout
+                android:id="@+id/layout_valtan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_valtan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_valtan"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setValtan"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of2"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetValtan"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setValtan"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Vykas -->
+            <RelativeLayout
+                android:id="@+id/layout_vykas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_vykas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_vykas"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setVykas"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of2"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetVykas"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setVykas"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Kakul -->
+            <RelativeLayout
+                android:id="@+id/layout_kakul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_kakul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_kakul"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setKakul"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetKakul"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setKakul"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Brelshaza -->
+            <RelativeLayout
+                android:id="@+id/layout_brelshaza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_brelshaza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_brelshaza"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setBrelshaza"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of4"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetBrelshaza"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setBrelshaza"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Kayangel -->
+            <RelativeLayout
+                android:id="@+id/layout_kayangel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_kayangel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_kayangel"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_abyss_dungeon" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setKayangel"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetKayangel"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setKayangel"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Akkan -->
+            <RelativeLayout
+                android:id="@+id/layout_akkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_akkan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_akkan"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setAkkan"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetAkkan"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setAkkan"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Ivory Tower -->
+            <RelativeLayout
+                android:id="@+id/layout_ivory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_ivory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_ivory"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_abyss_dungeon" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setIvory"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of4"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetIvory"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setIvory"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Thaemine -->
+            <RelativeLayout
+                android:id="@+id/layout_thaemine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_thaemine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_thaemine"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setThaemine"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetThaemine"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setThaemine"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+
+            <!-- Echidna -->
+            <RelativeLayout
+                android:id="@+id/layout_echidna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_echidna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|center"
+                    android:text="@string/s_echidna"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="13sp"
+                    app:drawableLeftCompat="@drawable/resized_legion_raid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setEchidna"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/s_0of3"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/light_blue"
+                    app:cornerRadius="1dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_resetEchidna"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_setEchidna"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

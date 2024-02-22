@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- Fragment Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/s_newCharacter"
+        android:textColor="@color/light_gray_text"
+        android:textSize="22sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Separator Character Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorCharacterInformation"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+
+            <!-- Character Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etl_characterName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/s_characterName"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_characterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Character Class -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etl_characterAscendancy"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                app:boxBackgroundColor="@color/dark_gray_bg">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/s_characterClass"
+                    android:inputType="none"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Character Item Level -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etl_characterItemLevel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:hint="@string/s_characterItemLevel"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_characterItemLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Separator Daily -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorDailyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+
+            <!-- Character Chaos Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_chaosDungeonDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_chaos_dungeon" />
+
+                <RadioGroup
+                    android:id="@+id/rg_chaosDungeon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:checkedButton="@id/rb_chaosDungeonYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_chaosDungeonYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_chaosDungeonNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_chaosDungeon3Days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_3days"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!-- Character Guardian Raid Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_guardianRaidDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_guardian_raid" />
+
+                <RadioGroup
+                    android:id="@+id/rg_guardianRaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:checkedButton="@id/rb_guardianRaidYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_guardianRaidYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_guardianRaidNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_guardianRaid3Days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_3days"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <!-- Character Una's Daily Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_unaDailyDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_una_daily" />
+
+                <RadioGroup
+                    android:id="@+id/rg_unaDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:checkedButton="@id/rb_unaDailyYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_unaDailyYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_unaDailyNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_unaDaily3Days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_3days"
+                        android:textColor="@color/white" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <!-- Character Daily Guild Support Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_guildSupportDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_sylmael" />
+
+                <RadioGroup
+                    android:id="@+id/rg_guildSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:checkedButton="@id/rb_guildSupportYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_guildSupportYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_guildSupportNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_guildSupport3Days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_3days"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <!-- Separator Weekly -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_separatorWeeklyDescription"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/light_gray_text" />
+
+            </LinearLayout>
+
+
+            <!-- Character Una's Weekly Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_unaWeeklyDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_una_weekly" />
+
+                <RadioGroup
+                    android:id="@+id/rg_unaWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="87dp"
+                    android:checkedButton="@id/rb_unaWeeklyYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_unaWeeklyYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_unaWeeklyNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!-- Character Legion Raids Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_legionRaidsDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_legion_raid" />
+
+                <RadioGroup
+                    android:id="@+id/rg_legionRaids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="87dp"
+                    android:checkedButton="@id/rb_legionRaidsYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_legionRaidsYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_legionRaidsNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <!-- Character Abyss Dungeons Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_abyssDungeonsDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_abyss_dungeon" />
+
+                <RadioGroup
+                    android:id="@+id/rg_abyssDungeons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="87dp"
+                    android:checkedButton="@id/rb_abyssDungeonsYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_abyssDungeonsYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_abyssDungeonsNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <!-- Character Guild Bloodstones Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_bloodstonesDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_sylmael" />
+
+                <RadioGroup
+                    android:id="@+id/rg_bloodstones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="87dp"
+                    android:checkedButton="@id/rb_bloodstonesYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_bloodstonesYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bloodstonesNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!-- Character Guild Contribution Setup -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/s_contributionDescription"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_gray_text"
+                    android:textSize="11sp"
+                    app:drawableTopCompat="@drawable/resized_sylmael" />
+
+                <RadioGroup
+                    android:id="@+id/rg_contribution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="87dp"
+                    android:checkedButton="@id/rb_contributionYes"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_contributionYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_yes"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_contributionNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/light_blue"
+                        android:text="@string/s_no"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <!-- Save Character Data Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_saveCharacterData"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="32dp"
+                android:text="@string/s_saveCharacterDataButton"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@color/light_blue"
+                app:cornerRadius="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

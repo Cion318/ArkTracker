@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Ark Tracker</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="s_newCharacter">New Character</string>
+    <string name="s_characterName">Name</string>
+    <string name="s_characterClass">Class</string>
+    <string name="s_characterItemLevel">Item Level</string>
+    <string name="s_chaosDungeonDescription">Chaos Dungeon</string>
+    <string name="s_guardianRaidDescription">Guardian Raid</string>
+    <string name="s_unaDailyDescription">Una\'s Daily</string>
+    <string name="s_guildSupportDescription">Guild Support</string>
+    <string name="s_unaWeeklyDescription">Una\'s Weekly</string>
+    <string name="s_legionRaidsDescription">Legion Raids</string>
+    <string name="s_abyssDungeonsDescription">Abyss Dungeons</string>
+    <string name="s_bloodstonesDescription">Guild Tickets</string>
+    <string name="s_contributionDescription">Guild Contribution</string>
+
+    <string name="s_separatorCharacterInformation">Character Information</string>
+    <string name="s_separatorDailyDescription">Daily Tasks</string>
+    <string name="s_separatorWeeklyDescription">Weekly Tasks</string>
+    <string name="s_separatorWeeklyRaidsDescription">Weekly Dungeons &amp; Raids</string>
+
+    <string name="s_yes">Yes</string>
+    <string name="s_no">No</string>
+    <string name="s_3days">3 Days</string>
+
+    <string name="s_saveCharacterDataButton">Save Character Data</string>
+    <string name="s_toastSavedData">Character saved</string>
+    <string name="s_editCharacterData">Edit Character Data</string>
+
+
+    <!-- Counter Strings -->
+    <string name="s_0of1">0/1</string>
+    <string name="s_1of1">1/1</string>
+    <string name="s_0of2">0/2</string>
+    <string name="s_1of2">1/2</string>
+    <string name="s_2of2">2/2</string>
+    <string name="s_0of3">0/3</string>
+    <string name="s_1of3">1/3</string>
+    <string name="s_2of3">2/3</string>
+    <string name="s_3of3">3/3</string>
+    <string name="s_0of4">0/4</string>
+    <string name="s_1of4">1/4</string>
+    <string name="s_2of4">2/4</string>
+    <string name="s_3of4">3/4</string>
+    <string name="s_4of4">4/4</string>
+
+
+    <!-- Raid and Dungeon Name Strings -->
+    <string name="s_valtan">Valtan</string>
+    <string name="s_vykas">Vykas</string>
+    <string name="s_kakul">Kakul-Saydon</string>
+    <string name="s_brelshaza">Brelshaza</string>
+    <string name="s_kayangel">Kayangel</string>
+    <string name="s_akkan">Akkan</string>
+    <string name="s_ivory">Ivory Tower</string>
+    <string name="s_thaemine">Thaemine</string>
+    <string name="s_echidna">Echidna</string>
+
+
+    <!-- Ascendancy Class Strings -->
+    <string name="s_berserker">Berserker</string>
+    <string name="s_destroyer">Destroyer</string>
+    <string name="s_gunlancer">Gunlancer</string>
+    <string name="s_paladin">Paladin</string>
+    <string name="s_slayer">Slayer</string>
+
+    <string name="s_arcanist">Arcanist</string>
+    <string name="s_bard">Bard</string>
+    <string name="s_sorceress">Sorceress</string>
+    <string name="s_summoner">Summoner</string>
+
+    <string name="s_breaker">Breaker</string>
+    <string name="s_glaivier">Glaivier</string>
+    <string name="s_scrapper">Scrapper</string>
+    <string name="s_soulfist">Soulfist</string>
+    <string name="s_striker">Striker</string>
+    <string name="s_wardancer">Wardancer</string>
+
+    <string name="s_artillerist">Artillerist</string>
+    <string name="s_deadeye">Deadeye</string>
+    <string name="s_gunslinger">Gunslinger</string>
+    <string name="s_machinist">Machinist</string>
+    <string name="s_sharpshooter">Sharpshooter</string>
+
+    <string name="s_deathblade">Deathblade</string>
+    <string name="s_reaper">Reaper</string>
+    <string name="s_shadowhunter">Shadowhunter</string>
+    <string name="s_souleater">Souleater</string>
+
+    <string name="s_aeromancer">Aeromancer</string>
+    <string name="s_artist">Artist</string>
+
+
+    <!-- Navigation Menu Strings -->
+    <string name="s_navHome">Home</string>
+    <string name="s_navCharacters">Characters</string>
+    <string name="s_navNewCharacter">New Character</string>
+
+    <string-array name="characterClasses">
+        <item>Berserker</item>
+        <item>Destroyer</item>
+        <item>Gunlancer</item>
+        <item>Paladin</item>
+        <item>Slayer</item>
+
+        <item>Arcanist</item>
+        <item>Bard</item>
+        <item>Sorceress</item>
+        <item>Summoner</item>
+
+        <item>Breaker</item>
+        <item>Glaivier</item>
+        <item>Scrapper</item>
+        <item>Soulfist</item>
+        <item>Striker</item>
+        <item>Wardancer</item>
+
+        <item>Artillerist</item>
+        <item>Deadeye</item>
+        <item>Gunslinger</item>
+        <item>Machinist</item>
+        <item>Sharpshooter</item>
+
+        <item>Deathblade</item>
+        <item>Reaper</item>
+        <item>Shadowhunter</item>
+        <item>Souleater</item>
+
+        <item>Aeromancer</item>
+        <item>Artist</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

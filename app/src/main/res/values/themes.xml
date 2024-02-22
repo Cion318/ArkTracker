@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ArkTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_blue</item>
+
+        <item name="android:colorBackground">@color/dark_gray_bg</item>
+        <item name="colorPrimaryDark">@color/dark_gray_bg</item> <!-- Toolbar Color -->
+        <item name="android:navigationBarColor">@color/dark_gray_bg</item> <!-- Bottom Color -->
+
+        <item name="colorSurface">@color/dark_gray_bg</item> <!-- Navbar Color -->
+        <item name="colorOnSurface">@color/white</item> <!-- TextInputLayout Color -->
+    </style>
+
+    <style name="customToast">
+        <item name="stTextBold">false</item>
+        <item name="stTextColor">@color/white</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">@color/light_gray_bg</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">2dp</item>
+        <item name="stStrokeColor">@color/light_blue</item>
+        <item name="stLength">LONG</item>
+    </style>
+</resources>
