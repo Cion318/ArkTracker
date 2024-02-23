@@ -1,4 +1,4 @@
-# Ark Tracker App
+# Ark Tracker App [WIP]
 
 The Ark Tracker App is a WiP mobile application designed to help users store and manage the daily and weekly activities in the game Lost Ark. 
 
