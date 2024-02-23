@@ -14,6 +14,13 @@ The Ark Tracker App is a WiP mobile application designed to help users store and
 - SQLite/Room Database
 
 ## Screenshots
+<table>
+  <tr>
+    <td><img src="https://i.imgur.com/Jinyo1g.jpeg" alt="Alt text 1" style="width: 220px;"/></td>
+    <td><img src="https://i.imgur.com/jj72Q9A.jpeg" alt="Alt text 2" style="width: 220px;"/></td>
+    <td><img src="https://i.imgur.com/tL1656w.jpeg" alt="Alt text 2" style="width: 220px;"/></td>
+  </tr>
+</table>
 
 ## Getting Started
 
